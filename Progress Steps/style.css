@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff0c2;
+    font-family: 'Kiwi Maru', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    width: 350px;
+    max-width: 100%;
+}
+
+.progress-container::before {
+    content: '';
+    position: absolute;
+    background-color: #424242;
+    height: 4px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.progress {
+    position: absolute;
+    background-color: #ABFFC8;
+    height: 4px;
+    width: 0%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+.circle {
+    background-color: #fff;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #424242;
+    transition: 0.4s ease;
+}
+
+.circle.active {
+    border: 3px solid #ABFFC8
+}
+
+.btn {
+    background-color: #ABFFC8;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.btn:disabled {
+    background-color: #343434;
+    color: white;
+    cursor: not-allowed;
+}
