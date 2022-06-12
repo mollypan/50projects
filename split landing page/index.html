@@ -1,0 +1,53 @@
+<!--
+ * @Author: Molly Pan
+ * @Date: 2022-06-12 14:36:50
+ * @LastEditTime: 2022-06-12 16:27:59
+ * @FilePath: /50projects/split landing page/index.html
+ * 只要卷不死，就往死里卷૮ ฅ'ㅅ'ฅ ა
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>split landing page</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="split left">
+            <h1>阿波連さんは計れない</h1>
+            <a href="https://www.bilibili.com/bangumi/play/ss39180?spm_id_from=333.337.0.0" class="btn">Watch Now</a>
+        </div>
+        <div class="split right">
+            <h1>Spy X Family</h1>
+            <a href="https://www.bilibili.com/bangumi/play/ss41410?spm_id_from=333.337.0.0" class="btn">Watch Now</a>
+        </div>
+    </div>
+
+    <script>
+        const left = document.querySelector('.left')
+        const right = document.querySelector('.right')
+        const container = document.querySelector('.container')
+
+        left.addEventListener('mouseenter', () => {
+            container.classList.add('hover-left')
+        })
+        left.addEventListener('mouseleave', () => {
+            container.classList.remove('hover-left')
+        })
+
+        right.addEventListener('mouseenter', () => {
+            container.classList.add('hover-right')
+        })
+        right.addEventListener('mouseleave', () => {
+            container.classList.remove('hover-right')
+        })
+
+    </script>
+</body>
+
+</html>
